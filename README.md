@@ -42,5 +42,22 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-First Digital Trust is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+First Digital Trust Limited (trading as First Digital) is a Hong Kong-headquartered trust and custody
+institution serving the digital asset industry. It markets **Open Trust APIs**, a RESTful API suite
+covering client onboarding, KYC & assured identity, account information, instruction initiation,
+reporting, webhooks and an SSO authentication service — but publishes no public developer portal, API
+reference, or machine-readable specification. API access is reached through a client relationship, so
+this profile records a **gated** API surface.
+
+Contract discovery was run against every First Digital host (`1stdigital.com`, `www.1stdigital.com`,
+`portal.1stdigital.com`, `helpdesk.1stdigital.com`, `cdn.1stdigital.com`) for OpenAPI, GraphQL, MCP
+and A2A. Nothing was found. The one real document served anywhere on the `/.well-known/` surface is
+an RFC 9116 `security.txt`. Note that `portal.1stdigital.com` answers HTTP 200 on every other
+`/.well-known/*` path with an Angular single-page-app shell — that is a catch-all, not a document,
+and no agent card was recorded from it.
+
+- Website: https://1stdigital.com/
+- Open Trust APIs: https://1stdigital.com/open-trust-apis/
+- Support: https://helpdesk.1stdigital.com/
+- Security Center: https://1stdigital.com/security/
+- Legal & Regulatory: https://1stdigital.com/legal-and-regulatory/

@@ -1,0 +1,130 @@
+generated: '2026-08-12'
+method: searched
+source: https://1stdigital.com/security/ + https://1stdigital.com/legal-and-regulatory/
+note: >-
+  No machine-readable contract is published for First Digital's Open Trust APIs, so none of the
+  technical/protocol standards below can be confirmed from a specification — every `conforms: null`
+  row means "not determinable from any public artifact", which is different from `false`. The
+  organisational and regulatory standards ARE published by the provider on its own pages and are
+  recorded as confirmed.
+standards:
+- id: soc1-type2
+  category: audit
+  conforms: true
+  evidence: >-
+    "First Digital Trust Limited is SOC 1 Type 2 compliant for financial reporting."
+    (https://1stdigital.com/security/)
+- id: soc2-type2
+  category: audit
+  conforms: true
+  evidence: >-
+    "First Digital Trust Limited is SOC 2 Type 2 compliant to keep your data safe."
+    (https://1stdigital.com/security/)
+- id: iso-27001
+  category: information-security
+  conforms: true
+  evidence: >-
+    "First Digital Trust Limited is ISO27001 certified." (https://1stdigital.com/security/)
+- id: csa-star-level-1
+  category: cloud-security
+  conforms: true
+  evidence: >-
+    "First Digital has completed STAR Level 1: Self-Assessment." (https://1stdigital.com/security/)
+- id: aml-ctf
+  category: financial-crime
+  conforms: true
+  evidence: >-
+    Group-wide AML/CTF policies subject to regular independent audits
+    (https://1stdigital.com/security/)
+- id: fatca
+  category: tax-reporting
+  conforms: true
+  evidence: >-
+    FATCA GIIN registered with the US Internal Revenue Service
+    (https://1stdigital.com/legal-and-regulatory/)
+- id: hk-trustee-ordinance-cap29-s78
+  category: regulatory-licence
+  conforms: true
+  evidence: >-
+    Registration under section 78(1) of the Trustee Ordinance (Cap. 29), Hong Kong Companies Registry
+    (https://1stdigital.com/legal-and-regulatory/)
+- id: hk-tcsp-licence
+  category: regulatory-licence
+  conforms: true
+  evidence: >-
+    Trust or Company Service Provider Licence TC006771, Hong Kong Companies Registry
+    (https://1stdigital.com/legal-and-regulatory/)
+- id: lithuania-vasp
+  category: regulatory-licence
+  conforms: true
+  evidence: >-
+    FDP LT UAB registered as a Virtual Asset Service Provider with FCIS, Lithuania
+    (https://1stdigital.com/legal-and-regulatory/)
+- id: uk-hmrc-tcsp
+  category: regulatory-licence
+  conforms: true
+  evidence: >-
+    First Digital Trust (UK) Limited, HMRC Trust or Company Service Provider XGML00000180819
+    (https://1stdigital.com/legal-and-regulatory/)
+- id: lei
+  category: entity-identification
+  conforms: true
+  evidence: 'GLEIF Legal Entity Identifier 984500ZA6Q06C3C4F933'
+- id: swift-bic
+  category: entity-identification
+  conforms: true
+  evidence: 'SWIFT BIC FRDTHKH2'
+- id: rfc9116-security-txt
+  category: security-discovery
+  conforms: true
+  evidence: >-
+    A valid RFC 9116 security.txt with Contact, Acknowledgments, Expires and Preferred-Languages is
+    served from 1stdigital.com, www.1stdigital.com and portal.1stdigital.com
+    (well-known/first-digital-trust-security.txt)
+- id: rest
+  category: api-style
+  conforms: true
+  evidence: >-
+    "Plug in seamlessly via our industry-standard RESTful API" — provider's own description of the
+    Open Trust APIs (https://1stdigital.com/open-trust-apis/)
+- id: openapi
+  category: api-contract
+  conforms: false
+  evidence: >-
+    No OpenAPI/Swagger document found. Probed /openapi.json, /openapi.yaml, /swagger.json,
+    /v1/openapi.json and /api-docs on 1stdigital.com, www.1stdigital.com, portal.1stdigital.com,
+    helpdesk.1stdigital.com and cdn.1stdigital.com — all 403/404, none parsed as a spec.
+- id: asyncapi
+  category: event-contract
+  conforms: false
+  evidence: Webhooks are advertised but no AsyncAPI document is published.
+- id: oauth2
+  category: authentication
+  conforms: null
+  evidence: >-
+    Not determinable. The provider advertises an SSO "authentication service" but publishes no
+    auth reference. The client portal (portal.1stdigital.com) authenticates end users against
+    Microsoft Entra ID via MSAL, which is portal sign-in, not a documented API auth model.
+- id: oidc
+  category: authentication
+  conforms: null
+  evidence: >-
+    Not determinable. No /.well-known/openid-configuration is served by any First Digital host;
+    portal.1stdigital.com returns the SPA shell at that path, not a discovery document.
+- id: rfc9457-problem-details
+  category: errors
+  conforms: null
+  evidence: Not determinable — no spec and no public error reference.
+- id: idempotency
+  category: conventions
+  conforms: null
+  evidence: Not determinable — no spec and no public conventions reference.
+- id: pagination
+  category: conventions
+  conforms: null
+  evidence: Not determinable — no spec and no public conventions reference.
+summary:
+  confirmed: 15
+  not_conformant: 2
+  not_determinable: 5
+  determinable_from_spec: false

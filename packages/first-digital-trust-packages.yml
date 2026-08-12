@@ -1,0 +1,40 @@
+generated: '2026-08-12'
+method: searched
+source: >-
+  registry.npmjs.org search, pypi.org, api.github.com/orgs, and the provider's own Open Trust APIs
+  product page
+note: >-
+  No first-party client library was found in any public registry. This is a recorded absence, not an
+  unchecked field. The provider publishes no SDK links, no code samples and no developer portal, so
+  there was nothing to derive candidates from either.
+packages: []
+package_count: 0
+registries_searched:
+- registry: npm
+  queries:
+  - '1stdigital'
+  - 'first-digital-trust'
+  result: no first-party package
+- registry: pypi
+  queries:
+  - '1stdigital'
+  - 'firstdigitaltrust'
+  - 'first-digital-trust'
+  - 'fdt-sdk'
+  result: 404 on every candidate
+- registry: github
+  queries:
+  - 'orgs/1stdigital'
+  - 'orgs/firstdigitaltrust'
+  - 'orgs/first-digital-trust'
+  result: >-
+    Only github.com/1stdigital resolves (200). It is named "FD Technologies", has zero public
+    members and exactly one public repository — `multisig-contract-v2`, a FORK of
+    ton-blockchain/multisig-contract-v2. No API client library, and first-party ownership by First
+    Digital Trust Limited could not be confirmed from the org metadata, so no GitHubOrganization
+    pointer was wired.
+- registry: maven-central
+  result: not searched — no JVM SDK referenced anywhere in provider material
+- registry: nuget
+  result: not searched — no .NET SDK referenced anywhere in provider material
+official_sdks_found: 0

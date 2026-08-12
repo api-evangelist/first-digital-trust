@@ -1,0 +1,134 @@
+generated: '2026-08-12'
+method: probed
+source: live probes of every First Digital host found in apis.yml
+note: >-
+  Only /.well-known/security.txt returns a real document. IMPORTANT: portal.1stdigital.com answers
+  HTTP 200 to EVERY other /.well-known/* path, but the body is the Angular single-page-app shell
+  (`<!doctype html>` … `<title>FDTClientPortalNextGen</title>`), not a discovery document — the
+  classic SPA catch-all false positive. Those rows are recorded as `status: 200` with
+  `document: false` and must not be read as a served surface. The marketing host 1stdigital.com sits
+  behind a Cloudflare bot challenge that answers 403 to automated clients on most paths, but exempts
+  /robots.txt and /.well-known/security.txt, both of which returned real text/plain documents.
+hosts:
+- host: https://1stdigital.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    content_type: text/plain; charset=utf-8
+    document: true
+    file: first-digital-trust-security.txt
+  - path: /.well-known/openid-configuration
+    status: 403
+    document: false
+    note: Cloudflare bot challenge interstitial
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    document: false
+    note: Cloudflare bot challenge interstitial
+  - path: /.well-known/api-catalog
+    status: 403
+    document: false
+    note: Cloudflare bot challenge interstitial
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    document: false
+    note: Cloudflare bot challenge interstitial
+  - path: /.well-known/agent-card.json
+    status: 403
+    document: false
+  - path: /.well-known/agent.json
+    status: 403
+    document: false
+- host: https://www.1stdigital.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    content_type: text/plain; charset=utf-8
+    document: true
+    note: identical body to the apex host; not stored twice
+  - path: /.well-known/openid-configuration
+    status: 403
+    document: false
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    document: false
+  - path: /.well-known/api-catalog
+    status: 403
+    document: false
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    document: false
+  - path: /.well-known/agent-card.json
+    status: 403
+    document: false
+  - path: /.well-known/agent.json
+    status: 403
+    document: false
+- host: https://portal.1stdigital.com
+  note: FDTClientPortalNextGen — the Angular client portal SPA (version 2.3.0, commit c3aaa2c)
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    content_type: text/plain; charset=utf-8
+    document: true
+    note: identical body to the apex host; not stored twice
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: text/html
+    document: false
+    note: SPA catch-all — returns the Angular index shell, NOT an OIDC discovery document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    content_type: text/html
+    document: false
+    note: SPA catch-all — returns the Angular index shell
+  - path: /.well-known/api-catalog
+    status: 200
+    content_type: text/html
+    document: false
+    note: SPA catch-all — returns the Angular index shell
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    content_type: text/html
+    document: false
+    note: SPA catch-all — returns the Angular index shell
+  - path: /.well-known/agent-card.json
+    status: 200
+    content_type: text/html
+    document: false
+    note: SPA catch-all — HTML body, rejected as an agent card; no a2a/ artifact written
+  - path: /.well-known/agent.json
+    status: 200
+    content_type: text/html
+    document: false
+    note: SPA catch-all — HTML body, rejected as an agent card
+- host: https://helpdesk.1stdigital.com
+  note: Deskpro-hosted "First Digital Support Center"
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    document: false
+  - path: /.well-known/openid-configuration
+    status: 404
+    document: false
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    document: false
+  - path: /.well-known/api-catalog
+    status: 404
+    document: false
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    document: false
+  - path: /.well-known/agent-card.json
+    status: 404
+    document: false
+  - path: /.well-known/agent.json
+    status: 404
+    document: false
+summary:
+  paths_probed: 30
+  real_documents: 1
+  document_types:
+  - security.txt
+  spa_catchall_200s: 6

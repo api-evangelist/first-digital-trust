@@ -1,0 +1,39 @@
+generated: '2026-08-12'
+method: searched
+source: https://1stdigital.com/open-trust-apis/
+spec_type: null
+note: >-
+  First Digital advertises webhooks as one of the seven capability areas of its Open Trust APIs
+  product. This artifact records the ADVERTISED surface only. No AsyncAPI document, no event
+  catalogue, no payload schemas and no subscription/verification mechanics are published anywhere
+  public — the product page states the capability in one sentence and offers no reference. Nothing
+  below is inferred or invented; the event list is empty because the provider publishes no event
+  list, and that absence is the finding.
+webhooks:
+  advertised: true
+  documented: false
+  catalog_published: false
+  asyncapi_published: false
+  description: >-
+    "Webhooks — Sync notifications and automated responses across applications and accounts."
+    (verbatim from the Open Trust APIs product page)
+  scope_stated:
+  - notification synchronisation across applications
+  - automated responses across applications and accounts
+  events: []
+  delivery: null
+  signature_verification: null
+  retry_policy: null
+  subscription_management: null
+gaps:
+  - No public event catalogue — an integrator cannot learn which events exist before signing.
+  - No payload schemas or example deliveries.
+  - No documented signature/verification scheme for validating deliveries.
+  - No AsyncAPI document.
+evidence:
+- url: https://1stdigital.com/open-trust-apis/
+  http_status: 403
+  note: >-
+    Live URL answers 403 to automated clients behind a Cloudflare bot challenge (robots.txt is
+    `Allow: /`). Content read verbatim from the public Internet Archive capture of the provider's
+    own page, snapshot 20240226064926.

@@ -1,0 +1,4 @@
+Acknowledgments: https://1stdigital.com/security/
+Contact: mailto:infosec@1stdigital.com
+Expires: 2026-12-31T01:08:00Z
+Preferred-Languages: en

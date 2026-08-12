@@ -1,0 +1,27 @@
+generated: '2026-08-12'
+method: searched
+source: https://1stdigital.com/open-trust-apis/ + https://helpdesk.1stdigital.com/kb
+note: >-
+  No rate limits are published. There is no public API reference in which limits could be stated, and
+  the public Deskpro knowledge base carries only end-user Client Portal articles (19 articles, all
+  about navigating the portal, whitelisting wallets and creating transfer instructions) — nothing
+  developer-facing. No response headers could be observed either, because no public unauthenticated
+  API endpoint is reachable. limit_count is 0 as an honest zero.
+limits_published: false
+docs: null
+limit_count: 0
+limits: []
+headers:
+  observed: false
+  documented: false
+  note: >-
+    Neither documented nor observable — there is no public endpoint to elicit RateLimit-* /
+    X-RateLimit-* / Retry-After headers from.
+exhaustion_status_code: null
+evidence:
+- url: https://1stdigital.com/open-trust-apis/
+  http_status: 403
+  note: Cloudflare bot challenge; archived copy of the provider's own page documents no limits.
+- url: https://helpdesk.1stdigital.com/kb
+  http_status: 200
+  note: Public knowledge base index — Client Portal end-user articles only, no API reference.

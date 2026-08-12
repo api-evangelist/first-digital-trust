@@ -1,0 +1,88 @@
+generated: '2026-08-12'
+method: searched
+probe: true
+source: https://1stdigital.com/security/
+url: https://1stdigital.com/security/
+note: >-
+  First Digital publishes a "Security Center" page naming its audit and certification posture, and a
+  separate "Legal & Regulatory" page listing the licensed entities and their registrations. There is
+  no continuous-monitoring trust portal (Vanta/Drata/SafeBase style) — the posture is published as
+  static pages on the company's own site. The live pages answer HTTP 403 to automated clients behind
+  a Cloudflare bot challenge (robots.txt is `Allow: /`); the text below was read from the public
+  Internet Archive capture of the provider's own pages.
+certifications:
+- name: SOC 1 Type 2
+  entity: First Digital Trust Limited
+  scope: financial reporting
+  evidence: https://1stdigital.com/security/
+- name: SOC 2 Type 2
+  entity: First Digital Trust Limited
+  scope: security of client data
+  evidence: https://1stdigital.com/security/
+- name: ISO/IEC 27001
+  entity: First Digital Trust Limited
+  scope: information security management
+  evidence: https://1stdigital.com/security/
+- name: CSA STAR Level 1 (Self-Assessment)
+  entity: First Digital
+  scope: cloud security control transparency
+  evidence: https://1stdigital.com/security/
+compliance_programs:
+- name: AML/CTF
+  description: >-
+    Group-wide anti-money-laundering / counter-terrorist-financing policies subject to regular
+    independent AML/CTF audits.
+  evidence: https://1stdigital.com/security/
+- name: FATCA
+  description: Registered with the US Internal Revenue Service; GIIN published on the legal page.
+  evidence: https://1stdigital.com/legal-and-regulatory/
+security_practices:
+- Background checks and NDAs for employees with access to sensitive data
+- Security training on joining
+- Strong password requirements and two-factor authentication on sensitive services
+- Least-privilege and role-based access control
+licenses:
+- entity: First Digital Trust Limited
+  jurisdiction: Hong Kong SAR
+  registration: Trust or Company Service Provider Licence
+  regulator: Companies Registry
+  reference: TC006771
+- entity: First Digital Trust Limited
+  jurisdiction: Hong Kong SAR
+  registration: Registration under section 78(1) of the Trustee Ordinance (Cap. 29)
+  regulator: Companies Registry
+  reference: null
+- entity: First Digital Trust Limited
+  jurisdiction: International
+  registration: Legal Entity Identifier
+  regulator: GLEIF
+  reference: 984500ZA6Q06C3C4F933
+- entity: First Digital Trust Limited
+  jurisdiction: International
+  registration: Business Identifier Code (BIC)
+  regulator: SWIFT
+  reference: FRDTHKH2
+- entity: First Digital Trust (UK) Limited
+  jurisdiction: United Kingdom
+  registration: Trust or Company Service Provider
+  regulator: HMRC
+  reference: XGML00000180819
+- entity: FDP LT UAB
+  jurisdiction: Lithuania
+  registration: Virtual Asset Service Provider
+  regulator: FCIS
+  reference: null
+evidence:
+- source: https://1stdigital.com/security/
+  keywords:
+  - soc 1 type 2
+  - soc 2 type 2
+  - iso27001
+  - csa star level 1
+  - aml/ctf
+- source: https://1stdigital.com/legal-and-regulatory/
+  keywords:
+  - trust or company service provider
+  - trustee ordinance
+  - fatca
+  - legal entity identifier
