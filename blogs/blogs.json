@@ -1,0 +1,21 @@
+{
+  "repo": "first-digital-trust",
+  "feeds": [
+    {
+      "source": "https://portal.1stdigital.com/",
+      "feed_url": "https://portal.1stdigital.com/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
+      "source": "https://1stdigital.com/news-and-insights/",
+      "feed_url": "https://1stdigital.com/news-and-insights/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-08-15T12:22:01Z"
+}
