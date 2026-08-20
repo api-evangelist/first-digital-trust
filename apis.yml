@@ -23,6 +23,17 @@ tags:
 - Digital Assets
 - Custody
 - Trust Services
+- Financial-Services
+- Banking
+- Payments
+- Compliance
+- Cryptocurrency
+- Hong Kong
+tags_raw:
+- Company
+- Digital Assets
+- Custody
+- Trust Services
 - Financial Services
 - Banking
 - Payments
@@ -46,6 +57,12 @@ apis:
   humanURL: https://1stdigital.com/open-trust-apis/
   baseURL: null
   tags:
+  - Custody
+  - Digital Assets
+  - Trust Services
+  - Account Information
+  - Webhook
+  tags_raw:
   - Custody
   - Digital Assets
   - Trust Services
