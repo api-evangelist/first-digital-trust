@@ -10,12 +10,12 @@
     },
     {
       "source": "https://1stdigital.com/news-and-insights/",
-      "feed_url": "https://1stdigital.com/news-and-insights/",
+      "feed_url": "https://1stdigital.com/feeds/blog/",
       "title": "",
       "saved": 0,
-      "method": "none"
+      "method": "discovered"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-08-15T12:22:01Z"
+  "fetched": "2026-08-22T20:20:02Z"
 }
