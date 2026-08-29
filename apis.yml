@@ -11,6 +11,17 @@ description: 'First Digital Trust Limited (trading as First Digital) is a Hong K
   specification; API access is reached through a client relationship. The firm is licensed as a Trust
   or Company Service Provider in Hong Kong (TC006771) and registered under section 78(1) of the
   Trustee Ordinance (Cap. 29), and is SOC 1 Type 2, SOC 2 Type 2 and ISO 27001 certified.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.1stdigital.com/brand/favicon.png
 url: https://raw.githubusercontent.com/api-evangelist/first-digital-trust/refs/heads/main/apis.yml
 x-type: company
