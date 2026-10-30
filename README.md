@@ -64,22 +64,110 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-First Digital Trust Limited (trading as First Digital) is a Hong Kong-headquartered trust and custody
-institution serving the digital asset industry. It markets **Open Trust APIs**, a RESTful API suite
-covering client onboarding, KYC & assured identity, account information, instruction initiation,
-reporting, webhooks and an SSO authentication service — but publishes no public developer portal, API
-reference, or machine-readable specification. API access is reached through a client relationship, so
-this profile records a **gated** API surface.
+First Digital Trust Limited (trading as First Digital) is a Hong Kong-headquartered, technology-driven trust and custody institution serving the digital asset industry — blockchain startups, money service businesses, exchanges and token issuers. It provides multi-asset trust and custody across major fiat currencies, digital assets and securities, plus fiat gateways, settlement and clearing, payments rails, accounting and compliance infrastructure. It markets a developer-facing product, "Open Trust APIs" — an industry-standard RESTful API suite covering client onboarding, KYC/AML data access, account information, instruction initiation, reporting, webhooks and an SSO authentication service — but publishes no public developer portal, API reference or machine-readable specification; API access is reached through a client relationship. The firm is licensed as a Trust or Company Service Provider in Hong Kong (TC006771) and registered under section 78(1) of the Trustee Ordinance (Cap. 29), and is SOC 1 Type 2, SOC 2 Type 2 and ISO 27001 certified.
 
-Contract discovery was run against every First Digital host (`1stdigital.com`, `www.1stdigital.com`,
-`portal.1stdigital.com`, `helpdesk.1stdigital.com`, `cdn.1stdigital.com`) for OpenAPI, GraphQL, MCP
-and A2A. Nothing was found. The one real document served anywhere on the `/.well-known/` surface is
-an RFC 9116 `security.txt`. Note that `portal.1stdigital.com` answers HTTP 200 on every other
-`/.well-known/*` path with an Angular single-page-app shell — that is a catch-all, not a document,
-and no agent card was recorded from it.
+**Areas:** Company · Digital Assets · Custody · Trust Services · Financial Services · Banking · Payments · Compliance · Cryptocurrency · Hong Kong
 
-- Website: https://1stdigital.com/
-- Open Trust APIs: https://1stdigital.com/open-trust-apis/
-- Support: https://helpdesk.1stdigital.com/
-- Security Center: https://1stdigital.com/security/
-- Legal & Regulatory: https://1stdigital.com/legal-and-regulatory/
+## First Digital Trust on APIs.io
+
+Everything profiled for First Digital Trust is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/first-digital-trust/](https://apis.io/providers/first-digital-trust/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Open Trust APIs](https://apis.io/apis/first-digital-trust/first-digital-trust-open-trust-apis/) — First Digital's RESTful API suite for programmatic access to its trust and custody data and services. The provider's product page describes seven capability…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [First Digital Trust Webhooks](https://apis.io/asyncapis/first-digital-trust/first-digital-trust-webhooks/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [First Digital Trust Domain Security](https://apis.io/security/first-digital-trust/first-digital-trust-domain-security/)
+- [First Digital Trust Trust Center](https://apis.io/security/first-digital-trust/first-digital-trust-trust-center/)
+- [First Digital Trust Vulnerability Disclosure](https://apis.io/security/first-digital-trust/first-digital-trust-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [First Digital Trust Plans Pricing](https://apis.io/plans/first-digital-trust/first-digital-trust-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [First Digital Trust Rate Limits](https://apis.io/rate-limits/first-digital-trust/first-digital-trust-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://1stdigital.com/)
+- [Documentation](https://1stdigital.com/open-trust-apis/)
+- [Support](https://helpdesk.1stdigital.com/)
+- [Blog](https://1stdigital.com/news-and-insights/)
+- [Security](https://1stdigital.com/security/)
+- [Compliance](https://1stdigital.com/legal-and-regulatory/)
+- [Terms of service](https://1stdigital.com/legal-and-regulatory/acceptable-use-policy/)
+- [Privacy policy](https://1stdigital.com/legal-and-regulatory/privacy-policy/)
+
+## API Evangelist rating
+
+**Kin Score 32.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 39.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 43.4 |
+
+**Agent readiness 19.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 23.6** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/first-digital-trust/](https://apis.io/providers/first-digital-trust/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for First Digital Trust: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/first-digital-trust/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
